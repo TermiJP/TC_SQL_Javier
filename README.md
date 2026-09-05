@@ -12,7 +12,7 @@ tc-sql-tu_equipo/
 ├── parte_2_modelo_bigquery/
 │   ├── data/                          # vacío — los datos viven en BigQuery
 │   ├── docs/
-│   │   ├── er_diagram.png             # diagrama ER completo (tablas, PK/FK, cardinalidades)
+│   │   ├── er_diagram.png             # diagrama ER completo 
 │   │   └── normalizacion.md           # modelo detallado + justificación 1NF/2NF/3NF
 │   └── notebooks/
 │       ├── 01_setup_bigquery.ipynb    # crea el dataset y las 7 tablas
@@ -24,4 +24,25 @@ tc-sql-tu_equipo/
 └── requirements.txt
 ```
 
-# 
+# Flujo de trabajo
+
+Lo primero fue crear el repo, y estructurar los archivos y todo lo necesario para empezar a programar.
+
+Luego empece a crear el ER de la base de datos y normalizandola 3NF siguiendo las instrucciones de la guia y las intrucciones del repositorio.
+
+Despues empece a programar el SQL Murder Mistery.
+
+## Notebooks
+
+# 1. Set-up bigquery
+
+Luego empece con los notebooks siguiendo los pasos marcados. Lo primero fue hacer las credenciales de Google Cloud y crear el Servicies account. De ahi asacar la clave de json y linkar en el .env las credenciales para poder conectarme a mi cuenta.
+Desarrolle el primer notebook sin mucho problema, cree las tablas y lo verifique.
+
+# 2.Generate_data
+
+Aqui con la libreria FAker, utilizamos sus funciones para ordenaor de forma correcta las 7 tablas respetando el orden de dependencia FK. Lo separamos todo bien por categorias.
+
+# 3.Verficacion
+
+Aqui hacemos consultas a la bigquery para probar su funcionamiento correcto. Preguntando cosas como ingresos al mes, top 10 productos, etc. basicamente un ejercicio de verificacion de que todo funciona en orden y de foma correcta.
